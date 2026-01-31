@@ -8,104 +8,82 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    color: #e0f7ff;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    color: #2c3e50;
     min-height: 100vh;
+    line-height: 1.6;
 }
 
 /* ==========================
    HEADER
 ========================== */
 header {
-    background: linear-gradient(135deg, #fbff23 0%, #ffd700 100%);
-    color: #000000;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
     text-align: center;
-    padding: 40px 20px;
-    box-shadow: 0 8px 32px rgba(251, 255, 35, 0.3);
+    padding: 50px 20px;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
     position: relative;
-    overflow: hidden;
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-    animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
 }
 
 header h1 {
-    font-size: 2.8em;
+    font-size: 2.2em;
     margin: 0;
-    position: relative;
-    z-index: 1;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    font-weight: 800;
-    letter-spacing: 2px;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 /* ==========================
    SECCIÓN DE INTRODUCCIÓN
 ========================== */
 .introduccion {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 40px auto;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
 }
 
 .avatar {
-    width: 120px;
-    height: 120px;
-    background: linear-gradient(135deg, #fbff23, #ffd700);
-    color: #000;
-    font-size: 3em;
-    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #a8d8ea 0%, #aa96da 100%);
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: 300;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 30px;
-    box-shadow: 0 8px 24px rgba(251, 255, 35, 0.4);
-    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(168, 216, 234, 0.3);
 }
 
 .intro-texto h2 {
-    color: #fbff23;
-    font-size: 2em;
+    color: #667eea;
+    font-size: 1.8em;
     margin-bottom: 20px;
     text-align: center;
-    text-shadow: 2px 2px 8px rgba(251, 255, 35, 0.3);
+    font-weight: 300;
 }
 
 .intro-texto p {
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.8;
     margin-bottom: 15px;
     text-align: justify;
-    color: #c8e6ff;
+    color: #5a6c7d;
 }
 
 /* ==========================
    MAIN CONTAINER
 ========================== */
 main {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -114,18 +92,18 @@ main {
    UNIDADES
 ========================== */
 .unidad {
-    margin-bottom: 25px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 15px;
-    padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
     transition: all 0.3s ease;
 }
 
 .unidad:hover {
-    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 102, 204, 0.2);
 }
 
 /* ==========================
@@ -133,42 +111,22 @@ main {
 ========================== */
 .boton-unidad {
     display: block;
-    background: linear-gradient(135deg, #0066cc 0%, #004c99 100%);
-    color: white;
+    background: linear-gradient(135deg, #a8d8ea 0%, #aa96da 100%);
+    color: #ffffff;
     text-align: left;
-    padding: 18px 25px;
-    font-size: 1.4em;
-    font-weight: bold;
-    border-radius: 12px;
+    padding: 20px 25px;
+    font-size: 1.1em;
+    font-weight: 400;
+    border-radius: 0;
     text-decoration: none;
-    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.4);
-    transition: all 0.3s ease;
     border: none;
     cursor: pointer;
     width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.boton-unidad::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s;
-}
-
-.boton-unidad:hover::before {
-    left: 100%;
+    transition: all 0.3s ease;
 }
 
 .boton-unidad:hover {
-    background: linear-gradient(135deg, #0077ee 0%, #0066cc 100%);
-    transform: translateX(5px);
-    box-shadow: 0 6px 20px rgba(0, 119, 238, 0.6);
+    background: linear-gradient(135deg, #95c9dd 0%, #9a84ce 100%);
 }
 
 /* ==========================
@@ -176,87 +134,217 @@ main {
 ========================== */
 .boton-tema {
     display: block;
-    background: linear-gradient(135deg, #efff10 0%, #d4e000 100%);
-    color: #000;
-    padding: 14px 20px;
-    border-radius: 10px;
+    background: #fcbad3;
+    color: #2c3e50;
+    padding: 15px 20px;
+    border-radius: 8px;
     text-align: left;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
     border: none;
-    box-shadow: 0 3px 10px rgba(239, 255, 16, 0.3);
-    transition: all 0.3s ease;
-    margin-left: 20px;
-    width: calc(100% - 20px);
     cursor: pointer;
-    margin-top: 10px;
+    margin: 10px 20px 10px 30px;
+    width: calc(100% - 50px);
+    transition: all 0.3s ease;
+    font-size: 0.95em;
 }
 
 .boton-tema:hover {
-    background: linear-gradient(135deg, #ffff40 0%, #efff10 100%);
-    transform: translateX(8px);
-    box-shadow: 0 5px 15px rgba(239, 255, 16, 0.5);
+    background: #faa2c1;
+    transform: translateX(5px);
 }
 
 /* ==========================
    LISTA DE PDFs Y VIDEOS
 ========================== */
 .lista-pdf {
-    margin-top: 10px;
-    padding-left: 10px;
+    margin: 0;
+    padding: 10px 20px 20px 20px;
 }
 
 .lista-pdf a {
     display: block;
-    margin-left: 40px;
-    padding: 12px 15px;
+    margin-left: 50px;
+    padding: 12px 18px;
     margin-top: 8px;
-    background: rgba(255, 255, 255, 0.08);
-    color: #e0f7ff;
-    border-radius: 8px;
+    background: #f8f9fa;
+    color: #2c3e50;
+    border-radius: 6px;
     text-decoration: none;
-    border-left: 4px solid #0066cc;
+    border-left: 3px solid #a8d8ea;
     transition: all 0.3s ease;
-    font-size: 1em;
-    position: relative;
-    overflow: hidden;
+    font-size: 0.9em;
 }
 
 .lista-pdf a::before {
-    content: '📄';
+    content: '📄 ';
     margin-right: 8px;
-    font-size: 1.2em;
 }
 
-/* Icono especial para videos de YouTube */
 .lista-pdf a[href*="youtube"]::before,
 .lista-pdf a[href*="youtu.be"]::before {
-    content: '🎬';
+    content: '▶️ ';
 }
 
 .lista-pdf a:hover {
-    background: rgba(0, 102, 204, 0.2);
-    transform: translateX(10px);
-    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
-    border-left-color: #fbff23;
+    background: #e8f4f8;
+    transform: translateX(8px);
+    border-left-color: #667eea;
 }
 
 /* ==========================
    TEMAS CONTAINER
 ========================== */
 .temas {
-    margin-top: 15px;
-    padding: 10px;
+    padding: 10px 0;
+    background: #fafbfc;
 }
 
 .tema {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /* ==========================
-   ANIMACIONES
+   SCROLLBAR PERSONALIZADO
 ========================== */
-@keyframes fadeIn {
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f3f5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #a8d8ea, #aa96da);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #95c9dd, #9a84ce);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    .introduccion {
+        margin: 20px;
+        padding: 25px;
+    }
+    
+    .avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 2em;
+    }
+    
+    .intro-texto h2 {
+        font-size: 1.5em;
+    }
+    
+    .intro-texto p {
+        font-size: 0.95em;
+        text-align: left;
+    }
+    
+    main {
+        padding: 15px;
+    }
+    
+    .boton-unidad {
+        font-size: 1em;
+        padding: 18px 20px;
+    }
+    
+    .boton-tema {
+        font-size: 0.9em;
+        padding: 12px 15px;
+        margin: 8px 15px 8px 20px;
+        width: calc(100% - 35px);
+    }
+    
+    .lista-pdf a {
+        margin-left: 30px;
+        font-size: 0.85em;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 35px 15px;
+    }
+    
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    .introduccion {
+        margin: 15px;
+        padding: 20px;
+    }
+    
+    .avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8em;
+    }
+    
+    .boton-unidad {
+        font-size: 0.95em;
+        padding: 15px 18px;
+    }
+    
+    .boton-tema {
+        margin: 8px 10px 8px 15px;
+        width: calc(100% - 25px);
+    }
+    
+    .lista-pdf a {
+        margin-left: 20px;
+    }
+}
+
+/* ==========================
+   MEJORAS VISUALES
+========================== */
+.boton-unidad::after {
+    content: '›';
+    float: right;
+    font-size: 1.5em;
+    font-weight: 300;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.boton-unidad:hover::after {
+    transform: translateX(5px);
+    opacity: 1;
+}
+
+.boton-tema::after {
+    content: '›';
+    float: right;
+    font-size: 1.3em;
+    font-weight: 300;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.boton-tema:hover::after {
+    transform: translateX(3px);
+    opacity: 1;
+}
+
+/* ==========================
+   ANIMACIÓN SUAVE AL CARGAR
+========================== */
+@keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -268,130 +356,9 @@ main {
 }
 
 .unidad {
-    animation: fadeIn 0.5s ease-out;
+    animation: fadeInUp 0.5s ease-out;
 }
 
-/* ==========================
-   SCROLLBAR PERSONALIZADO
-========================== */
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: #1a1a2e;
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #0066cc, #fbff23);
-    border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #0077ee, #ffff40);
-}
-
-/* ==========================
-   RESPONSIVE
-========================== */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-    
-    .introduccion {
-        margin: 20px;
-        padding: 20px;
-    }
-    
-    .avatar {
-        width: 100px;
-        height: 100px;
-        font-size: 2.5em;
-    }
-    
-    .intro-texto h2 {
-        font-size: 1.5em;
-    }
-    
-    .intro-texto p {
-        font-size: 1em;
-        text-align: left;
-    }
-    
-    main {
-        padding: 10px;
-    }
-    
-    .boton-unidad {
-        font-size: 1.2em;
-        padding: 15px 20px;
-    }
-    
-    .boton-tema {
-        font-size: 1em;
-        padding: 12px 15px;
-        margin-left: 10px;
-        width: calc(100% - 10px);
-    }
-    
-    .lista-pdf a {
-        margin-left: 20px;
-        font-size: 0.9em;
-        padding: 10px 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 30px 15px;
-    }
-    
-    header h1 {
-        font-size: 1.6em;
-    }
-    
-    .introduccion {
-        margin: 15px;
-        padding: 15px;
-    }
-    
-    .avatar {
-        width: 80px;
-        height: 80px;
-        font-size: 2em;
-    }
-    
-    .boton-unidad {
-        font-size: 1.1em;
-        padding: 12px 15px;
-    }
-}
-
-/* ==========================
-   EFECTOS HOVER ADICIONALES
-========================== */
-.boton-unidad,
-.boton-tema,
-.lista-pdf a {
-    position: relative;
-    z-index: 1;
-}
-
-.boton-unidad::after,
-.boton-tema::after {
-    content: '▶';
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.8em;
-    opacity: 0.6;
-    transition: all 0.3s ease;
-}
-
-.boton-unidad:hover::after,
-.boton-tema:hover::after {
-    right: 15px;
-    opacity: 1;
+.introduccion {
+    animation: fadeInUp 0.6s ease-out;
 }
