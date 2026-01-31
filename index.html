@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Portafolio Digital - Sandy Pujota</title>
+<style>
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 20px;
+    background-color: #000;
+    color: #fff;
+}
+header {
+    background-color: #c00;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+header h1 {
+    margin: 0;
+    color: #fff;
+}
+.boton-unidad, .boton-tema {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    background: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+}
+.boton-unidad:hover {
+    background: #0052a3;
+}
+.boton-tema { 
+    background: #c00; 
+    margin-left: 20px; 
+    width: calc(100% - 20px);
+}
+.boton-tema:hover {
+    background: #a00;
+}
+.lista-pdf a {
+    display: block;
+    margin-left: 40px;
+    padding: 8px;
+    background: #333;
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 5px;
+    text-decoration: none;
+    border-left: 3px solid #0066cc;
+}
+.lista-pdf a:hover {
+    background: #444;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left:0; top:0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+.modal-contenido {
+    background: white;
+    width: 90%;
+    height: 90%;
+    margin: 2% auto;
+    position: relative;
+    padding: 10px;
+    border-radius: 8px;
+}
+.modal iframe {
+    width: 100%; 
+    height: calc(100% - 40px);
+    border: none;
+}
+.cerrar {
+    position: absolute;
+    top: 10px; 
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #c00;
+    font-weight: bold;
+}
+.cerrar:hover {
+    color: #f00;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Portafolio Digital - Sandy Pujota</h1>
+</header>
+<main>
+
+<!-- INFORMES -->
+<div class="unidad">
+    <a href="#" class="boton-unidad">Informes</a>
+    <div class="temas" style="display:none;">
+        <div class="tema">
+            <div class="lista-pdf" style="display:block;">
+                <a href="#" class="pdf-item" data-pdf="Informes/informe1.pdf">Informe 1</a>
+                <a href="#" class="pdf-item" data-pdf="Informes/informe2.pdf">Informe 2</a>
+                <a href="#" class="pdf-item" data-pdf="Informes/informe3.pdf">Informe 3</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- UNIDAD 1 -->
+<div class="unidad">
+    <a href="#" class="boton-unidad">Unidad 1</a>
+    <div class="temas" style="display:none;">
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 1</a>
+            <div class="lista-pdf" style="display:none;">
+                <a href="#" class="pdf-item" data-pdf="U1M/T1/Clase_3_ed_como_modelo_matemático_(1).pdf">Clase 3 ED como modelo matemático</a>
+                <a href="#" class="pdf-item" data-pdf="U1M/T1/ecuacion_diferencial.pdf">Ecuación diferencial</a>
+                <a href="#" class="pdf-item" data-pdf="U1M/T1/evaluacion_unidad_1_tema_1_revision_del_intento_mate.pdf">Evaluación Unidad 1 Tema 1</a>
+                <a href="#" class="pdf-item" data-pdf="U1M/T1/presentacion_silabo_mat4.pdf">Presentación sílabo mat4</a>
+            </div>
+        </div>
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 2</a>
+            <div class="lista-pdf" style="display:none;">
+                <a href="#" class="pdf-item" data-pdf="U1M/T2/evaluacion_unidad1_tema_2_revision_del_intento_mate.pdf">Evaluación Unidad 1 Tema 2</a>
+                <a href="#" class="pdf-item" data-pdf="U1M/T2/valores_iniciales.pdf">Valores iniciales</a>
+            </div>
+        </div>
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 3</a>
+            <div class="lista-pdf" style="display:none;">
+                <a href="#" class="pdf-item" data-pdf="U1M/T3/ecuaciones_diferenciales_exactas_El_blog_Leo.pdf">Ecuaciones diferenciales exactas El blog Leo</a>
+                <a href="#" class="pdf-item" data-pdf="U1M/T3/EcuacionesDiferencialesI_EcuacionesdiferencialesexactasElblogdeLeo.pdf">Ecuaciones Diferenciales exactas</a>
+                <a href="#" class="pdf-item" data-pdf="U1M/T3/evaluacion_unidad1_tema3_revision_del_intento_mate.pdf">Evaluación Unidad 1 Tema 3</a>
+            </div>
+        </div>
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 4</a>
+            <div class="lista-pdf" style="display:none;">
+                <a href="#" class="pdf-item" data-pdf="U1M/T4/ecuaciones_diferenciales.pdf">Ecuaciones diferenciales</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- UNIDAD 2 -->
+<div class="unidad">
+    <a href="#" class="boton-unidad">Unidad 2</a>
+    <div class="temas" style="display:none;">
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 1</a>
+            <div class="lista-pdf" style="display:none;">
+                <a href="#" class="pdf-item" data-pdf="U2M/T1/7.4Ecuacionesdiferencialesseparables-LibreTextsEspañol.pdf">7.4 Ecuaciones diferenciales separables</a>
+                <a href="#" class="pdf-item" data-pdf="U2M/T1/Ecuacionesdiferencialesdevariablesseparadas.pdf">Ecuaciones diferenciales de variables separadas</a>
+                <a href="#" class="pdf-item" data-pdf="U2M/T1/EvaluaciónUnidad2Tema1_Revisióndelintento_mate.pdf">Evaluación Unidad 2 Tema 1</a>
+            </div>
+        </div>
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 2</a>
+            <div class="lista-pdf" style="display:none;">
+                <a href="#" class="pdf-item" data-pdf="U2M/T2/ACTIVIDADecuacionesdiferencialesHomogéneas.pdf">ACTIVIDAD ecuaciones diferenciales Homogéneas</a>
+                <a href="#" class="pdf-item" data-pdf="U2M/T2/EcuacionesDiferenciales_Homogeneas_Parte1.pdf">Ecuaciones Diferenciales Homogéneas Parte 1</a>
+                <a href="#" class="pdf-item" data-pdf="U2M/T2/EvaluaciónUnidad2Tema2_Revisióndelintento_mate.pdf">Evaluación Unidad 2 Tema 2</a>
+            </div>
+        </div>
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 3</a>
+            <div class="lista-pdf" style="display:none;">
+                <a href="#" class="pdf-item" data-pdf="U2M/T3/EvaluaciónUnidad2Tema3_Revisióndelintento_mate.pdf">Evaluación Unidad 2 Tema 3</a>
+            </div>
+        </div>
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 4</a>
+            <div class="lista-pdf" style="display:none;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- UNIDAD 3 -->
+<div class="unidad">
+    <a href="#" class="boton-unidad">Unidad 3</a>
+    <div class="temas" style="display:none;">
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 1</a>
+            <div class="lista-pdf" style="display:none;">
+                <a href="#" class="pdf-item" data-pdf="U3M/T1/EvaluaciónUnidad3Tema1_Revisióndelintento_mate.pdf">Evaluación Unidad 3 Tema 1</a>
+                <a href="#" class="pdf-item" data-pdf="U3M/T1/Integraciónaproximada_Regladeltrapecio-AprendeMatematicas.pdf">Integración aproximada Regla del trapecio</a>
+                <a href="#" class="pdf-item" data-pdf="U3M/T1/INTEGRACIÓNNUMERICA_Introducción.pdf">INTEGRACIÓN NUMÉRICA Introducción</a>
+                <a href="#" class="pdf-item" data-pdf="U3M/T1/MétododeGauss.pdf">Método de Gauss</a>
+                <a href="#" class="pdf-item" data-pdf="U3M/T1/Newton_Cotes_2.pdf">Newton Cotes 2</a>
+                <a href="#" class="pdf-item" data-pdf="U3M/T1/Repasounidad3.pdf">Repaso unidad 3</a>
+            </div>
+        </div>
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 2</a>
+            <div class="lista-pdf" style="display:none;">
+                <a href="#" class="pdf-item" data-pdf="U3M/T2/EvaluaciónUnidad_3Tema2_RevisióndeIntento_MATE.pdf">Evaluación Unidad 3 Tema 2</a>
+                <a href="#" class="pdf-item" data-pdf="U3M/T2/RegladeSimpson.pdf">Regla de Simpson</a>
+            </div>
+        </div>
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 3</a>
+            <div class="lista-pdf" style="display:none;">
+                <a href="#" class="pdf-item" data-pdf="U3M/T3/ActividadFórmulasdeNewton.pdf">Actividad Fórmulas de Newton</a>
+                <a href="#" class="pdf-item" data-pdf="U3M/T3/EvaluaciónUnidad3Tema3_Revisióndelintento_mate.pdf">Evaluación Unidad 3 Tema 3</a>
+            </div>
+        </div>
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 4</a>
+            <div class="lista-pdf" style="display:none;">
+                <a href="#" class="pdf-item" data-pdf="U3M/T4/ActividadCuadraturadeGauss.pdf">Actividad Cuadratura de Gauss</a>
+                <a href="#" class="pdf-item" data-pdf="U3M/T4/EvaluaciónUnidad3Tema4_Revisióndelintento_mate.pdf">Evaluación Unidad 3 Tema 4</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- UNIDAD 4 -->
+<div class="unidad">
+    <a href="#" class="boton-unidad">Unidad 4</a>
+    <div class="temas" style="display:none;">
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 1</a>
+            <div class="lista-pdf" style="display:none;">
+                <a href="#" class="pdf-item" data-pdf="U4M/T1/EvaluaciónUnidad4tema1_Revisióndelintento_mate.pdf">Evaluación Unidad 4 Tema 1</a>
+                <a href="#" class="pdf-item" data-pdf="U4M/T1/MétododeBisección.pdf">Método de Bisección</a>
+                <a href="#" class="pdf-item" data-pdf="U4M/T1/MétododeGauss.pdf">Método de Gauss</a>
+                <a href="#" class="pdf-item" data-pdf="U4M/T1/Métododelabisección.pdf">Método de la bisección</a>
+                <a href="#" class="pdf-item" data-pdf="U4M/T1/MÉTODODELASECANTE(Runge).pdf">MÉTODO DE LA SECANTE Runge</a>
+                <a href="#" class="pdf-item" data-pdf="U4M/T1/NewtonRaphson.pdf">Newton Raphson</a>
+                <a href="#" class="pdf-item" data-pdf="U4M/T1/UNIDAD4_intro.pdf">UNIDAD 4 intro</a>
+            </div>
+        </div>
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 2</a>
+            <div class="lista-pdf" style="display:none;">
+                <a href="#" class="pdf-item" data-pdf="U4M/T2/EvaluaciónUnidad4tema2_Revisióndelintento_mate.pdf">Evaluación Unidad 4 Tema 2</a>
+                <a href="#" class="pdf-item" data-pdf="U4M/T2/MétododeNewton.pdf">Método de Newton</a>
+            </div>
+        </div>
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 3</a>
+            <div class="lista-pdf" style="display:none;">
+                <a href="#" class="pdf-item" data-pdf="U4M/T3/MétododelaSecante.pdf">Método de la Secante</a>
+                <a href="#" class="pdf-item" data-pdf="U4M/T3/Unidad4_tema3_mat4_RevisióndelIntent_mate.pdf">Unidad 4 Tema 3 mat4</a>
+            </div>
+        </div>
+        <div class="tema">
+            <a href="#" class="boton-tema">Tema 4</a>
+            <div class="lista-pdf" style="display:none;">
+                <a href="#" class="pdf-item" data-pdf="U4M/T4/MÉTODDELAFALSAPOSICIÓN.pdf">MÉTODO DE LA FALSA POSICIÓN</a>
+                <a href="#" class="pdf-item" data-pdf="U4M/T4/UNidad4_tema4_Mat4_Revisióndelintento_mate.pdf">Unidad 4 Tema 4 Mat4</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<!-- MODAL PDF -->
+<div id="modalPDF" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+        <iframe id="visorPDF"></iframe>
+    </div>
+</div>
+
+<script>
+document.querySelectorAll(".boton-unidad").forEach(unidad => {
+    unidad.addEventListener("click", function(e){
+        e.preventDefault();
+        const temas = this.nextElementSibling;
+        temas.style.display = temas.style.display === "block" ? "none" : "block";
+    });
+});
+
+document.querySelectorAll(".boton-tema").forEach(tema => {
+    tema.addEventListener("click", function(e){
+        e.preventDefault();
+        const lista = this.nextElementSibling;
+        lista.style.display = lista.style.display === "block" ? "none" : "block";
+    });
+});
+
+const modal = document.getElementById("modalPDF");
+const visor = document.getElementById("visorPDF");
+const cerrar = document.querySelector(".cerrar");
+
+document.querySelectorAll(".pdf-item").forEach(pdf => {
+    pdf.addEventListener("click", function(e){
+        e.preventDefault();
+        visor.src = this.dataset.pdf;
+        modal.style.display = "block";
+    });
+});
+
+cerrar.onclick = function(){
+    modal.style.display = "none";
+    visor.src = "";
+}
+
+window.onclick = function(e){
+    if(e.target === modal){
+        modal.style.display = "none";
+        visor.src = "";
+    }
+}
+</script>
+</body>
+</html>

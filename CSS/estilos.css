@@ -1,0 +1,172 @@
+/* estilos.css */
+
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background-color: #0077cc; /* azul de encabezado */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.5em; /* grande */
+    margin-bottom: 15px;
+}
+
+header h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+/* MENÚ DE UNIDADES */
+.menu-unidades {
+    background-color: #2ea7cc; /* verde */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.menu-unidades ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-unidades li {
+    margin-bottom: 10px;
+}
+
+.menu-unidades li ul {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.menu-unidades a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-unidades a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+/* ==========================
+   ESTILOS GENERALES
+========================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background-color: #0077cc;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+header h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* ==========================
+   MENU DE UNIDADES (BOTONES)
+========================== */
+
+/* Contenedor de las filas */
+/* ==== FILAS DE UNIDADES ==== */
+.menu-unidades .fila {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+/* ==== BOTÓN DE UNIDAD ==== */
+.boton-unidad {
+    display: block;
+    background: linear-gradient(135deg, #ff6b6b, #f06595); /* degradado divertido */
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 15px;
+    text-decoration: none;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.boton-unidad:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 6px 6px 20px rgba(0,0,0,0.4);
+}
+
+/* ==== CONTENEDOR DE TEMAS ==== */
+.temas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+/* ==== BOTONES DE TEMA ==== */
+.boton-tema {
+    display: block;
+    background: linear-gradient(135deg, #51cf66, #2f9e44); /* verde brillante */
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.boton-tema:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #37b24d, #218838); /* verde más oscuro */
+}
+
+/* ==== RESPONSIVO ==== */
+@media (max-width: 800px) {
+    .menu-unidades .fila {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
