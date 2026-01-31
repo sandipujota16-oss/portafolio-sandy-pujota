@@ -1,155 +1,397 @@
 /* ==========================
    ESTILOS GENERALES
 ========================== */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
-    background: radial-gradient(circle at top, #0a2a43, #020b13);
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     color: #e0f7ff;
+    min-height: 100vh;
 }
 
 /* ==========================
    HEADER
 ========================== */
 header {
-    background: linear-gradient(180deg, #0bbcd6, #063a5f);
-    color: #e0f7ff;
+    background: linear-gradient(135deg, #fbff23 0%, #ffd700 100%);
+    color: #000000;
     text-align: center;
     padding: 40px 20px;
-    box-shadow: 0 0 25px rgba(11,188,214,0.6);
+    box-shadow: 0 8px 32px rgba(251, 255, 35, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 header h1 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
-}
-
-header h2 {
-    font-size: 1.5em;
-    margin-top: 20px;
-    color: #bff3ff;
+    font-size: 2.8em;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
 /* ==========================
-   MENU DE UNIDADES
+   SECCIÓN DE INTRODUCCIÓN
 ========================== */
-.menu-unidades {
+.introduccion {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
     background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
-    margin: 25px;
-    border-radius: 15px;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 0 20px rgba(0, 191, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* ==== FILAS ==== */
-.menu-unidades .fila {
+.avatar {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #fbff23, #ffd700);
+    color: #000;
+    font-size: 3em;
+    font-weight: bold;
+    border-radius: 50%;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 40px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
+    margin: 0 auto 30px;
+    box-shadow: 0 8px 24px rgba(251, 255, 35, 0.4);
+    border: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.intro-texto h2 {
+    color: #fbff23;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(251, 255, 35, 0.3);
+}
+
+.intro-texto p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #c8e6ff;
 }
 
 /* ==========================
-   BOTONES DE UNIDAD (AVATAR)
+   MAIN CONTAINER
+========================== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ==========================
+   UNIDADES
+========================== */
+.unidad {
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.unidad:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 102, 204, 0.2);
+}
+
+/* ==========================
+   BOTONES DE UNIDAD
 ========================== */
 .boton-unidad {
     display: block;
-    background: linear-gradient(135deg, #0bbcd6, #006d9c);
-    color: #ffffff;
-    text-align: center;
-    padding: 25px;
-    font-size: 1.3em;
+    background: linear-gradient(135deg, #0066cc 0%, #004c99 100%);
+    color: white;
+    text-align: left;
+    padding: 18px 25px;
+    font-size: 1.4em;
     font-weight: bold;
-    border-radius: 16px;
+    border-radius: 12px;
     text-decoration: none;
-    box-shadow:
-        0 0 12px rgba(11,188,214,0.7),
-        inset 0 0 8px rgba(255,255,255,0.2);
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.4);
     transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.boton-unidad::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.boton-unidad:hover::before {
+    left: 100%;
 }
 
 .boton-unidad:hover {
-    transform: translateY(-6px) scale(1.05);
-    background: linear-gradient(135deg, #1ee3ff, #0bbcd6);
-    box-shadow:
-        0 0 25px rgba(30,227,255,0.9),
-        inset 0 0 12px rgba(255,255,255,0.3);
+    background: linear-gradient(135deg, #0077ee 0%, #0066cc 100%);
+    transform: translateX(5px);
+    box-shadow: 0 6px 20px rgba(0, 119, 238, 0.6);
 }
 
 /* ==========================
-   TEMAS
+   BOTONES DE TEMA
 ========================== */
-.temas {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 15px;
-}
-
-/* ==== BOTONES DE TEMA ==== */
 .boton-tema {
-    background: rgba(255, 255, 255, 0.08);
-    color: #bff3ff;
-    padding: 12px;
-    border-radius: 12px;
-    text-align: center;
-    font-weight: bold;
+    display: block;
+    background: linear-gradient(135deg, #efff10 0%, #d4e000 100%);
+    color: #000;
+    padding: 14px 20px;
+    border-radius: 10px;
+    text-align: left;
+    font-weight: 600;
     text-decoration: none;
-    border: 1px solid rgba(191,243,255,0.3);
-    box-shadow: inset 0 0 10px rgba(0,191,255,0.2);
+    border: none;
+    box-shadow: 0 3px 10px rgba(239, 255, 16, 0.3);
     transition: all 0.3s ease;
+    margin-left: 20px;
+    width: calc(100% - 20px);
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 .boton-tema:hover {
-    background: rgba(30,227,255,0.15);
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba(30,227,255,0.7);
+    background: linear-gradient(135deg, #ffff40 0%, #efff10 100%);
+    transform: translateX(8px);
+    box-shadow: 0 5px 15px rgba(239, 255, 16, 0.5);
 }
 
 /* ==========================
-   LISTA DE PDFs
+   LISTA DE PDFs Y VIDEOS
 ========================== */
+.lista-pdf {
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
 .lista-pdf a {
     display: block;
     margin-left: 40px;
-    padding: 10px;
+    padding: 12px 15px;
     margin-top: 8px;
     background: rgba(255, 255, 255, 0.08);
     color: #e0f7ff;
-    border-radius: 10px;
+    border-radius: 8px;
     text-decoration: none;
-    border-left: 4px solid #0bbcd6;
-    box-shadow: inset 0 0 8px rgba(0,191,255,0.25);
+    border-left: 4px solid #0066cc;
     transition: all 0.3s ease;
+    font-size: 1em;
+    position: relative;
+    overflow: hidden;
+}
+
+.lista-pdf a::before {
+    content: '📄';
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+/* Icono especial para videos de YouTube */
+.lista-pdf a[href*="youtube"]::before,
+.lista-pdf a[href*="youtu.be"]::before {
+    content: '🎬';
 }
 
 .lista-pdf a:hover {
-    background: rgba(30,227,255,0.18);
-    transform: translateX(6px);
-    box-shadow: 0 0 12px rgba(30,227,255,0.8);
+    background: rgba(0, 102, 204, 0.2);
+    transform: translateX(10px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+    border-left-color: #fbff23;
 }
 
 /* ==========================
-   FOOTER
+   TEMAS CONTAINER
 ========================== */
-footer {
-    text-align: center;
-    margin: 30px 0;
-    font-size: 0.9em;
-    color: #9adfff;
+.temas {
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.tema {
+    margin-bottom: 10px;
+}
+
+/* ==========================
+   ANIMACIONES
+========================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.unidad {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* ==========================
+   SCROLLBAR PERSONALIZADO
+========================== */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #0066cc, #fbff23);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #0077ee, #ffff40);
 }
 
 /* ==========================
    RESPONSIVE
 ========================== */
-@media (max-width: 800px) {
-    .menu-unidades .fila {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .introduccion {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .avatar {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5em;
+    }
+    
+    .intro-texto h2 {
+        font-size: 1.5em;
+    }
+    
+    .intro-texto p {
+        font-size: 1em;
+        text-align: left;
+    }
+    
+    main {
+        padding: 10px;
+    }
+    
+    .boton-unidad {
+        font-size: 1.2em;
+        padding: 15px 20px;
+    }
+    
+    .boton-tema {
+        font-size: 1em;
+        padding: 12px 15px;
+        margin-left: 10px;
+        width: calc(100% - 10px);
+    }
+    
+    .lista-pdf a {
+        margin-left: 20px;
+        font-size: 0.9em;
+        padding: 10px 12px;
     }
 }
 
+@media (max-width: 480px) {
+    header {
+        padding: 30px 15px;
+    }
+    
+    header h1 {
+        font-size: 1.6em;
+    }
+    
+    .introduccion {
+        margin: 15px;
+        padding: 15px;
+    }
+    
+    .avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 2em;
+    }
+    
+    .boton-unidad {
+        font-size: 1.1em;
+        padding: 12px 15px;
+    }
+}
 
+/* ==========================
+   EFECTOS HOVER ADICIONALES
+========================== */
+.boton-unidad,
+.boton-tema,
+.lista-pdf a {
+    position: relative;
+    z-index: 1;
+}
 
+.boton-unidad::after,
+.boton-tema::after {
+    content: '▶';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.boton-unidad:hover::after,
+.boton-tema:hover::after {
+    right: 15px;
+    opacity: 1;
+}
