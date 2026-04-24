@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="header-principal">
+  <div class="badge-top">✦ Portafolio Digital ✦</div>
+  <h1>FÍSICA<br><span>Aplicada</span></h1>
+  <div class="header-sub">Sandy Pujota &nbsp;✦&nbsp; 2026</div>
+  <div class="header-dots">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="sidebar-group">
+      <div class="sidebar-label">Principal</div>
+      <button class="btn-carpeta" onclick="mostrar('silabo', this)"><span class="icon">📖</span> Sílabo</button>
+      <button class="btn-carpeta" onclick="mostrar('sistemas', this)"><span class="icon">🌍</span> Sistemas</button>
+      <button class="btn-carpeta" onclick="mostrar('curriculum', this)"><span class="icon">📘</span> Currículo</button>
+      <button class="btn-carpeta" onclick="mostrar('evaluaciones', this)"><span class="icon">📝</span> Evaluaciones</button>
+      <button class="btn-carpeta" onclick="mostrar('laboratorio', this)"><span class="icon">🔬</span> Laboratorio</button>
+    </div>
+
+    <div class="sidebar-group">
+      <div class="sidebar-label">Trabajos</div>
+      <button class="btn-carpeta" onclick="mostrar('trabajogrupal', this)"><span class="icon">👥</span> Grupal</button>
+      <button class="btn-carpeta" onclick="mostrar('trabajoindividual', this)"><span class="icon">👤</span> Individual</button>
+    </div>
+
+    <!-- 🔥 REEMPLAZO DE UNIDADES POR INICIO -->
+    <div class="sidebar-group">
+      <div class="sidebar-label">Inicio</div>
+      <button class="btn-carpeta" onclick="mostrar('welcome', this)">
+        <span class="icon">🏠</span> Inicio
+      </button>
+    </div>
+
+    <div class="sidebar-group">
+      <div class="sidebar-label">Recursos</div>
+      <button class="btn-carpeta" onclick="mostrar('glosario', this)"><span class="icon">📚</span> Glosario</button>
+    </div>
+  </aside>
+
+  <main class="contenedor-principal">
+
+    <!-- WELCOME + UNIDADES -->
+    <div id="welcome" class="seccion-contenido visible">
+      <div class="welcome-card">
+        <h2>Bienvenido al Portafolio</h2>
+        <p>Selecciona una sección del menú lateral para explorar el contenido del curso de Física Aplicada.</p>
+        <div class="welcome-pill">← Elige una sección</div>
+      </div>
+
+      <!-- UNIDADES VISIBLES -->
+      <div style="margin-top: 1.5rem; display:grid; gap:1rem;">
+        <div class="tarjeta">
+          <div class="card-header"><div class="card-icon">⚛️</div><div><h2>Unidad 1</h2></div></div>
+          <div class="card-body"><p>Contenido por agregar</p></div>
+        </div>
+
+        <div class="tarjeta">
+          <div class="card-header"><div class="card-icon">🔧</div><div><h2>Unidad 2</h2></div></div>
+          <div class="card-body"><p>Contenido por agregar</p></div>
+        </div>
+
+        <div class="tarjeta">
+          <div class="card-header"><div class="card-icon">📐</div><div><h2>Unidad 3</h2></div></div>
+          <div class="card-body"><p>Contenido por agregar</p></div>
+        </div>
+
+        <div class="tarjeta">
+          <div class="card-header"><div class="card-icon">💡</div><div><h2>Unidad 4</h2></div></div>
+          <div class="card-body"><p>Contenido por agregar</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SÍLABO -->
+    <div id="silabo" class="seccion-contenido">
+      <div class="tarjeta">
+        <div class="card-header">
+          <div class="card-icon">📖</div>
+          <div><h2>Sílabo</h2><p>Documento oficial del curso</p></div>
+        </div>
+        <div class="card-body">
+          <iframe src="SILABO/5. SILABO FÍSICA APLICADA.pdf" width="100%" height="500px" style="border:none; border-radius:10px;"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- SISTEMAS -->
+    <div id="sistemas" class="seccion-contenido">
+      <div class="tarjeta">
+        <div class="card-header">
+          <div class="card-icon">🌍</div>
+          <div><h2>Sistema Internacional</h2><p>Unidades y medidas</p></div>
+        </div>
+        <div class="card-body">
+          <iframe src="SISTEMASINTERNACIONALES/30362elsistemainternacionaldeunidadesweb0.pdf" width="100%" height="500px" style="border:none; border-radius:10px;"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- CURRICULO -->
+    <div id="curriculum" class="seccion-contenido">
+      <div class="tarjeta">
+        <div class="card-header">
+          <div class="card-icon">📘</div>
+          <div><h2>Currículo</h2><p>Perfil académico</p></div>
+        </div>
+        <div class="card-body">
+          <ul class="lista-archivos">
+            <li>
+              <a href="CURRICULUM/CURRICULUM.pdf" target="_blank">
+                <span class="file-icon">📄</span>
+                <div>Currículo<div class="file-meta">PDF</div></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- EVALUACIONES -->
+    <div id="evaluaciones" class="seccion-contenido">
+      <div class="tarjeta">
+        <div class="card-header">
+          <div class="card-icon">📝</div>
+          <div><h2>Evaluaciones</h2><p>Pruebas y exámenes</p></div>
+        </div>
+        <div class="card-body">
+          <div class="empty-state">
+            <div class="big-icon">📝</div>
+            <p>Contenido próximamente disponible</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LABORATORIO -->
+    <div id="laboratorio" class="seccion-contenido">
+      <div class="tarjeta">
+        <div class="card-header">
+          <div class="card-icon">🔬</div>
+          <div><h2>Laboratorio</h2><p>Prácticas experimentales</p></div>
+        </div>
+        <div class="card-body">
+          <div class="empty-state">
+            <div class="big-icon">🔬</div>
+            <p>Contenido próximamente disponible</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRUPAL -->
+    <div id="trabajogrupal" class="seccion-contenido">
+      <div class="tarjeta">
+        <div class="card-header">
+          <div class="card-icon">👥</div>
+          <div><h2>Trabajo Grupal</h2><p>Proyectos colaborativos</p></div>
+        </div>
+        <div class="card-body">
+          <div class="empty-state">
+            <div class="big-icon">👥</div>
+            <p>Contenido próximamente disponible</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INDIVIDUAL -->
+    <div id="trabajoindividual" class="seccion-contenido">
+      <div class="tarjeta">
+        <div class="card-header">
+          <div class="card-icon">👤</div>
+          <div><h2>Trabajo Individual</h2><p>Tareas personales</p></div>
+        </div>
+        <div class="card-body">
+          <ul class="lista-archivos">
+            <li><a href="TRABAJOINDIVIDUAL/trabajo1.pdf" target="_blank"><span class="file-icon">📄</span><div>Trabajo Individual 1<div class="file-meta">PDF</div></div></a></li>
+            <li><a href="TRABAJOINDIVIDUAL/trabajo1.2.pdf" target="_blank"><span class="file-icon">📄</span><div>Trabajo Individual 2<div class="file-meta">PDF</div></div></a></li>
+            <li><a href="TRABAJOINDIVIDUAL/trabajo2.pdf" target="_blank"><span class="file-icon">📄</span><div>Trabajo Individual 3<div class="file-meta">PDF</div></div></a></li>
+            <li><a href="TRABAJOINDIVIDUAL/trigonometria.pdf" target="_blank"><span class="file-icon">📄</span><div>Trabajo Individual 4<div class="file-meta">PDF</div></div></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- UNIDADES ORIGINALES -->
+    <div id="unidad1" class="seccion-contenido">...</div>
+    <div id="unidad2" class="seccion-contenido">...</div>
+    <div id="unidad3" class="seccion-contenido">...</div>
+    <div id="unidad4" class="seccion-contenido">...</div>
+
+    <!-- GLOSARIO -->
+    <div id="glosario" class="seccion-contenido">
+      <div class="tarjeta">
+        <div class="card-header">
+          <div class="card-icon">📚</div>
+          <div><h2>Glosario</h2><p>Términos de Física Aplicada</p></div>
+        </div>
+        <div class="card-body">
+          <div class="glosario-grid">
+            <div class="glosario-item">
+              <div class="glosario-term">Erostrato</div>
+              <div class="glosario-def">Persona que comete un acto delictivo o destructivo solo para ganar fama.</div>
+            </div>
+            <div class="glosario-item">
+              <div class="glosario-term">Embeber</div>
+              <div class="glosario-def">Empapar o absorber un líquido.</div>
+            </div>
+            <div class="glosario-item">
+              <div class="glosario-term">Impermedia</div>
+              <div class="glosario-def">Acción de hacer impermeable algo.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <p>✦ PORTAFOLIO DIGITAL &nbsp;·&nbsp; <span>FÍSICA APLICADA</span> &nbsp;·&nbsp; Sandy Pujota✦</p>
+</footer>
+
+<script>
+function mostrar(id, btn) {
+  document.querySelectorAll('.seccion-contenido').forEach(s => s.classList.remove('visible'));
+  document.querySelectorAll('.btn-carpeta').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('visible');
+  btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>
+```
